@@ -1,3 +1,6 @@
+//go:build !rust
+// +build !rust
+
 package go_rust_regex
 
 /*
