@@ -56,7 +56,7 @@ func rustReReplace(ptr unsafe.Pointer, text string, replacement string) string {
 	return ret
 }
 
-func RustReMustCompile(pattern string) *RustRe {
+func MustCompile(pattern string) *RustRe {
 
 	ptr, err := rustReCompile(pattern)
 
@@ -75,6 +75,6 @@ func RustReMustCompile(pattern string) *RustRe {
 	return re
 }
 
-func (re *RustRe) Replace(text string, replacement string) string {
+func (re *RustRe) ReplaceAllLiteralString(text string, replacement string) string {
 	return rustReReplace(re.ptr, text, replacement)
 }

@@ -66,4 +66,12 @@ func main() {
 		log.Fatal("could not build ", err)
 	}
 
+	cmd = exec.Command("rm", "-r", "/tmp/go-rust-regex")
+	cmd.Stdout = os.Stdout
+	cmd.Stderr = os.Stderr
+	err = cmd.Run()
+	if err != nil {
+		log.Fatal("could not build ", err)
+	}
+
 }
