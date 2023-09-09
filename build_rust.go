@@ -26,7 +26,7 @@ func main() {
 		log.Fatal("could not build ", err)
 	}
 
-	cmd = exec.Command("git", "clone", "git@github.com:thomas-thorburn-connect/go-rust-regex.git", "/tmp/go-rust-regex")
+	cmd = exec.Command("git", "clone", "https://github.com/thomas-thorburn-connect/go-rust-regex.git", "/tmp/go-rust-regex")
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
 	err = cmd.Run()
